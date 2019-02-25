@@ -15,4 +15,12 @@ export class UserService {
   public getUserInfo(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/public/users/get-info/${id}`);
   }
+
+  /**
+   * getUserSelfies - метод для получения картинок изера по id
+   * @param id - id юзера, чьи картинки запрашиваем с сервера
+   */
+  public getUserSelfies(id: string) {
+    return this.http.get<User>(`${this.apiUrl}/public/users/my-images/${id}`);
+  }
 }

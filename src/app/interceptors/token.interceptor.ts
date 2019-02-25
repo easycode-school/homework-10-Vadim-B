@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
+    HttpRequest,
+    HttpHandler,
+    HttpEvent,
+    HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthGlobalService } from '../services/auth-global.service';
@@ -19,8 +19,6 @@ export class TokenInterceptor implements HttpInterceptor {
                 'x-access-token': `${this.auth.getToken}`
             }
         });
-        console.log(req);
         return next.handle(req);
     }
-
 }

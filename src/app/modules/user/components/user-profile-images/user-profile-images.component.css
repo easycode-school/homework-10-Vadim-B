@@ -1,0 +1,33 @@
+.profile-tools {
+	padding: 25px 15px 50px;
+}
+
+.profile-selfies {
+	padding-bottom: 80px;
+}
+
+.profile-selfies .row {
+	margin-bottom: -30px;
+}
+
+.h-300 {
+	height: 300px;
+}
+
+.profile-selfies .row > * {
+	padding-bottom: 30px;
+}
+
+.profile-selfies .selfie-item {
+	background-color: #000;
+	border-radius: 5px;
+}
+
+.selfie-item img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: none;
+	height: 100%;
+	width: auto;
+}

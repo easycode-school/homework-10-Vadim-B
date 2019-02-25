@@ -10,10 +10,12 @@ export class AuthGlobalService {
   get getToken() {
     return localStorage.getItem('mlp_client_token');
   }
+
   get getUserId() {
     return this.jwtHelper.decodeToken(this.getToken)['id'];
   }
+
   public isTokenExpired() {
     return this.jwtHelper.isTokenExpired(this.getToken);
-  } 
+  }
 }
