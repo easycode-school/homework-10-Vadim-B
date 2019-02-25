@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     httpBackend: HttpBackend
-  ) { 
+  ) {
     this.http = new HttpClient(httpBackend);
   }
 
@@ -28,10 +28,10 @@ export class AuthService {
       map((res: OnLoginAnswer): OnLoginAnswer => {
         if (!res.error) {
           localStorage.setItem('mlp_client_token', res.token);
-        } 
+        }
 
         return res;
       })
-    )
+    );
   }
 }

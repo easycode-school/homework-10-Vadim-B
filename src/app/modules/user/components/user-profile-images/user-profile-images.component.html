@@ -1,3 +1,17 @@
-<p>
-  user-profile-images works!
-</p>
+<div class="container profile-tools d-flex justify-content-end align-items-center">
+    <div class="sort-tool d-flex align-items-center text-color-gray ng-star-inserted">
+      <span class="sort-tool-desc text-uppercase">Sort by: </span>
+    </div>
+</div>
+
+<div class="profile-selfies" *ngIf="userImages">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-xl-4 h-300" *ngFor="let image of userImages">
+        <div class="selfie-item pos-relative overflow-hidden cur-pointer h-100">
+          <img src="{{ image.url }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
